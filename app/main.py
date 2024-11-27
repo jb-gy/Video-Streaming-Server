@@ -1,4 +1,10 @@
-from fastapi import FastAPI, File, UploadFile, Depends, HTTPException, status
+try:
+    from fastapi import FastAPI, File, UploadFile, Depends, HTTPException, status
+except ModuleNotFoundError:
+    import sys
+    import subprocess
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "fastapi"])
+    from fastapi import FastAPI, File, UploadFile, Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordRequestForm
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware

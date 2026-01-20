@@ -1,9 +1,43 @@
-fastapi==0.115.5
-uvicorn==0.32.1
-python-multipart==0.0.17
-sqlalchemy==2.0.36
-psycopg2-binary==2.9.10
-python-jose[cryptography]==3.3.0
-passlib[bcrypt]==1.7.4
-python-dotenv==1.0.1
-aiofiles==24.1.0
+# Core Framework
+fastapi
+uvicorn[standard]
+python-multipart
+
+# Database
+sqlalchemy
+alembic
+databases[sqlite]  # For SQLite
+
+# Authentication & Security
+python-jose[cryptography]
+passlib[bcrypt]
+pyjwt
+bcrypt
+
+# File Handling
+aiofiles
+python-magic  # For file type detection
+
+# Video Processing (Optional but recommended)
+# ffmpeg-python==0.2.0  # Python wrapper for FFmpeg
+# pillow==10.2.0  # For thumbnail generation
+
+# Templates
+jinja2
+
+# Utilities
+python-dotenv
+pydantic
+pydantic-settings
+
+# Monitoring & Logging (Optional)
+# prometheus-client==0.19.0
+# python-json-logger==2.0.7
+
+# Testing (Development)
+pytest
+pytest-asyncio
+httpx
+
+# Production Server (Optional - for deployment)
+# gunicorn==21.2.0

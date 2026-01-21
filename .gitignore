@@ -3,5 +3,7 @@ __pycache__
 uploads
 processed
 .venv
+<<<<<<< HEAD
 /thumbnails
 /static
+.DS_Store
